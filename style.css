@@ -1,0 +1,6 @@
+body { background: #0f0f12; color: #e9ecef; }
+.navbar .brand { color: #ff6600; font-weight: 800; font-size: 1.4rem; }
+.card-dark { background: #141418; border: 1px solid #222; color: #e9ecef; }
+.thumb { height:160px; object-fit: cover; }
+.btn-outline-light { border-color: rgba(255,255,255,0.12); color: #e9ecef; }
+.search-input { background: #0b0b0d; color:#eee; border:1px solid #222; }
