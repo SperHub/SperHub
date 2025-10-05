@@ -1,5 +1,5 @@
 Flask
-Werkzeug
+flask_sqlalchemy
 Pillow
 gunicorn
 MarkupSafe==2.1.5
