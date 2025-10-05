@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>En vedette</h3>
+<div class="row">
+  {% for v in videos %}
+    <div class="col-6 col-md-3 mb-3">
+      <div class="card card-dark h-100">
+        <img src="{{ url_for('thumbs', filename=v.id + '.jpg') if (v.id + '.jpg') in (os.listdir('thumbnails') if os.path.exists('thumbnails') else []) else url_for('uploaded_file', filename=v.filename) }}" class="card-img-top thumb" alt="">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">{{ v.title }}</h6>
+          <p class="small text-muted mb-1">par {{ v.uploader }} • {{ v.created_at.split('T')[0] }}</p>
+          <a class="btn btn-sm btn-outline-light" href="{{ url_for('video_page', video_id=v.id) }}">Lire</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
