@@ -19,7 +19,8 @@ from pathlib import Path
 from functools import wraps
 
 from flask import (Flask, render_template_string, request, redirect, url_for,
-                   send_from_directory, flash, session, abort, Markup)
+                   send_from_directory, flash, session, abort)
+from markupsafe import Markup
 
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
