@@ -2,3 +2,4 @@ Flask
 Werkzeug
 Pillow
 gunicorn
+MarkupSafe==2.1.5
