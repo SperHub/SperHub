@@ -1,3 +1,4 @@
-Flask==2.3.2
-Flask-Login==0.6.3
+Flask
+Werkzeug
+Pillow
 gunicorn
