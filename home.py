@@ -24,6 +24,8 @@ from flask import (Flask, render_template_string, request, redirect, url_for,
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
+app = Flask(__name__)
+
 # ---------- CONFIG ----------
 BASE = Path(__file__).parent.resolve()
 UPLOAD_DIR = BASE / "uploads"
@@ -36,7 +38,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "dev-friendhub-secret")
 for d in (UPLOAD_DIR, THUMB_DIR):
     d.mkdir(parents=True, exist_ok=True)
 
-app = Flask(__name__)
+
 app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_LENGTH
 app.secret_key = SECRET_KEY
 
